@@ -51,16 +51,6 @@ const questions = [
         name: "usage",
         message: "Provide instructions and examples for use:"
     },
-    // {
-    //     type: "input",
-    //     name: "screenshots",
-    //     message: "Copy and paste screenshots seperated by a comma (example1.png, example2.jpeg, etc...):"
-    // },
-    // {
-    //     type: "input",
-    //     name: "collaboratorNum",
-    //     message: "How many collaborrators helped on this project?"
-    // },
     {
         type: "list",
         name: "license",
