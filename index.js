@@ -100,7 +100,7 @@ async function init() {
         console.log(answers);
         var data = generateMarkdown(answers);
         JSON.stringify(data)
-        writeToFile("README.md", data);
+        writeToFile("generatedREADME.md", data);
     })
 }
 
