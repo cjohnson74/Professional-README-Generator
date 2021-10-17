@@ -88,24 +88,21 @@ const questions = [
     }
 ];
 
-async function init() {
-    let answers = await inquirer.prompt(questions)
-    .then((answers) => {
-        console.log(answers);
-        // var parsedData = JSON.stringify(answers);
-        // console.log(par);
-        var data = generateMarkdown(answers);
-        JSON.stringify(data)
-        writeToFile("README.md", data);
-    })
-}
-
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(fileName, data);
 }
 
 // TODO: Create a function to initialize app
+async function init() {
+    let answers = await inquirer.prompt(questions)
+    .then((answers) => {
+        console.log(answers);
+        var data = generateMarkdown(answers);
+        JSON.stringify(data)
+        writeToFile("README.md", data);
+    })
+}
+
 // Function call to initialize app
 init();
